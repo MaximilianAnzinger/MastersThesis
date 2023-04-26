@@ -5,6 +5,6 @@
 \def\titleGer{(title german)}	            %TODO add title in German
 \def\supervisor{Prof. Dr. Stephan Krusche}
 \def\advisor{Jolanda Krümelmonster, M.Sc.}  %TODO add advisor name
-\def\author{(author)}			    %TODO add author name
+\def\author{(Maximilian Anzinger, B.Sc.)}
 \def\date{(handover date)}		    %TODO add submission / handover date
 \def\startdate{(start date)}		    %TODO add startdate
