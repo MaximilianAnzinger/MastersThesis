@@ -4,7 +4,7 @@
 \def\title{(title english)}		    %TODO add title in English
 \def\titleGer{(title german)}	            %TODO add title in German
 \def\supervisor{Prof. Dr. Stephan Krusche}
-\def\advisor{Jolanda Krümelmonster, M.Sc.}  %TODO add advisor name
-\def\author{(Maximilian Anzinger, B.Sc.)}
+\def\advisor{Patrick Bassner, M.Sc.}
+\def\author{Maximilian Anzinger, B.Sc.}
 \def\date{(handover date)}		    %TODO add submission / handover date
 \def\startdate{(start date)}		    %TODO add startdate
