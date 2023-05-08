@@ -1,8 +1,8 @@
 \def\proposal{}
-\def\degree{Master}                         %TODO adjust to your program
+\def\degree{Master}
 \def\program{Informatics}
-\def\title{(title english)}		    %TODO add title in English
-\def\titleGer{(title german)}	            %TODO add title in German
+\def\title{Integration of Adaptive Learning in Interactive Online Learning Environments}
+\def\titleGer{Integration von Adaptivem Lernen in Interactiven Online-Lernumgebungen}
 \def\supervisor{Prof. Dr. Stephan Krusche}
 \def\advisor{Patrick Bassner, M.Sc.}
 \def\author{Maximilian Anzinger, B.Sc.}

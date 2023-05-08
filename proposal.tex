@@ -35,54 +35,97 @@
 \headheight=15pt
 
 %------- Start of Proposal -------
-\TODO{Before you start with your thesis, have a look at our guides on confluence! \url{https://confluence.ase.in.tum.de/display/EduResStud/How+to+thesis}}
+%\TODO{Before you start with your thesis, have a look at our guides on confluence! \url{https://confluence.ase.in.tum.de/display/EduResStud/How+to+thesis}}
 \section{Introduction}
-\missing{ Introduction
-        \begin{itemize}
-                \item Introduce the reader to the general setting
-                \item What is the environment?
-                \item What are the tools in use?
-        \end{itemize}
-}
+%\missing{ Introduction
+%        \begin{itemize}
+%                \item Introduce the reader to the general setting
+%                \item What is the environment?
+%                \item What are the tools in use?
+%        \end{itemize}
+%}
 
-The wide availability of technology has changed the way students learn as well as the design of learning environments by instructors.
+The wide availability of technology has changed the way students learn as well as the design of learning environments by instructors. Numerous
+institutions have already integrated online learning into their teaching and are exploring the new possibilities. \textit{Artemis}
+\footnote{https://github.com/ls1intum/Artemis} is an \ac{LMS} developed at und used by the \ac{CIT} at \ac{TUM} and other universities.
+By allowing instructors to create interactive exercises, automation of feedback as well as grading, the educational tool aims for reduced
+workload of instructors whilst maintaining a high quality learning experience for students. Fuchs and Waldhauser have already added the support
+for learning and teaching analytics \cite{fuchs2021,waldhauser2021}. Aberle contributions extended the possibilities to assign exercises to competencies and create relations
+between such, effectively setting the foundation for the integration of \ac{AL} in Artemis \cite{aberle2022}.
 
 % more students, more online, new possibilites
 % first steps towards adaptive learning
 % competency relations
 
 \section{Problem}
-\missing{ Problem description
-        \begin{itemize}
-                \item What is/are the problem(s)?
-                \item Identify the actors and use these to describe how the problem negatively influences them.
-                \item Do not present solutions or alternatives yet!
-                \item Present the negative consequences in detail
-        \end{itemize}
-}
+%\missing{ Problem description
+%        \begin{itemize}
+%                \item What is/are the problem(s)?
+%                \item Identify the actors and use these to describe how the problem negatively influences them.
+%                \item Do not present solutions or alternatives yet!
+%                \item Present the negative consequences in detail
+%        \end{itemize}
+%}
 
+Large scale courses with up to 2000 users make it increasingly difficult for instructors to account for student's individual needs. In such large groups
+instructors inevitably encounter students with vastly different background, ability, age, and experience \cite{mulryan2010teaching}. Currently Artemis
+incorporates little to no features that support instructor's efforts to provide students with individualized material. This lack of individualization
+may cause students to be either bored or overwhelmed, situations that might impact the learning outcome and even mental-health \cite{graciani2020m, kadison2004college}.
+
+Finally, the addition of dashboards for self-evaluation have improved the situation in regard of \ac{SRL}, however, the platform does not actively promote
+\ac{SRL}.
 
 
 \section{Motivation}
-\missing{ Thesis Motivation
-        \begin{itemize}
-                \item Outline why it is important to solve the problem
-                \item Again use the actors to present your solution, but don't be to specific
-                \item Be visionary!
-                \item If applicable, motivate with existing research, previous work
-        \end{itemize}
-}
+%\missing{ Thesis Motivation
+%        \begin{itemize}
+%                \item Outline why it is important to solve the problem
+%                \item Again use the actors to present your solution, but don't be to specific
+%                \item Be visionary!
+%                \item If applicable, motivate with existing research, previous work
+%        \end{itemize}
+%}
+
+On-demand availability of learning material on Artemis has given students a great degree of freedom to plan their learning experience. Nontheless, research
+indicates that students may require assistance to do so effectively \cite{latham1991self}. Moreover, Artemis already collects a variety of data that can be used to analyze
+the capabilities of individual students. Therefore, this information can be used to provide an adaptive learning experience. Research has shown that
+\ac{AL} can improve learning outcome significantly \cite{liu2017investigating}.
+
+Furthermore, the implementation of \ac{AL} may incorporate features to allow for and promote \ac{SRL}. Accoring to TEAL
+"good self-regulators have developed the skills and habits to be effective learners, exhibit effective learning strategies, effort, and persistance" \cite{no2012self}.
+Characteristics that instructors certainly want to foster in their students.
 
 % reduce extraneous load
+% self regulated learning
+% adaptive learning
 
 \section{Objective}
-\missing{ Thesis Objective
-        \begin{itemize}
-                \item What are the main goals of your thesis?
-        \end{itemize}
-}
+%\missing{ Thesis Objective
+%        \begin{itemize}
+%                \item What are the main goals of your thesis?
+%        \end{itemize}
+%}
 
-This thesis will
+This thesis will focus on the integration of \ac{AL} into Artemis.
+Theoretical research and a requirements analysis will be used to create a software design based on the existing architecture of Artemis. The proposed
+design will be implemented in the \ac{LMS}. Finally, the thesis will document the analysis of the current state, requirements engineering process,
+and the development of the features proposed in this section.
+
+The following figures depict the proposed use cases and the analysis object model. The features are explained in detail in the consecutive subsections.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{figures/UseCases(3).png}
+        \caption{Use Cases related to adaptive learning in Artemis (new use cases are highlighted).}
+        \label{fig:UseCases}
+\end{figure}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{figures/ObjectModel (3).drawio.png}
+        \caption{Analysis Object Model for the proposed features and use cases (additions are highlighted).}
+        \label{fig:AOM}
+\end{figure}
 
 \subsection{Competency Management Improvements}
 To allow for individual learning paths, instructors must be able to configure competencies in more detail. Firstly, instructors should be
@@ -117,15 +160,15 @@ Furthermore, insturctors should be able to get insight into individual students'
 
 
 \section{Schedule}
-\missing{ Thesis Schedule
-        \begin{itemize}
-                \item When will the thesis Start (Always 15th of Month)
-                \item Create a rough plan for your thesis (separate the time in sprints with a length of 2-4 Weeks)
-                \item Each sprint should contain several work items - Again keep it high-level and make to keep your plan realistic
-                \item Make sure the work-items are measurable and deliverable
-                \item No writing related tasks! (e.g. "Write Analysis Chapter")
-        \end{itemize}
-}
+%\missing{ Thesis Schedule
+%        \begin{itemize}
+%                \item When will the thesis Start (Always 15th of Month)
+%                \item Create a rough plan for your thesis (separate the time in sprints with a length of 2-4 Weeks)
+%                \item Each sprint should contain several work items - Again keep it high-level and make to keep your plan realistic
+%                \item Make sure the work-items are measurable and deliverable
+%                \item No writing related tasks! (e.g. "Write Analysis Chapter")
+%        \end{itemize}
+%}
 
 \begin{itemize}
         \item \textbf{Sprint I} End of May (Week 20-21): Improve Competency Managment
