@@ -129,9 +129,9 @@
 
 \chapter{Requirements Analysis}
 
-\textit{Note: This chapter follows the Requirements Analysis Document Template in \cite{bruegge2004object}. 
-\textbf{Important:} Make sure that the whole chapter is independent of the chosen technology and development platform. The idea is that you illustrate concepts, taxonomies and relationships of the application domain independent of the solution domain!
-Cite \cite{bruegge2004object} several times in this chapter.}
+\textit{Note: This chapter follows the Requirements Analysis Document Template in \cite{bruegge2004object}.
+	\textbf{Important:} Make sure that the whole chapter is independent of the chosen technology and development platform. The idea is that you illustrate concepts, taxonomies and relationships of the application domain independent of the solution domain!
+	Cite \cite{bruegge2004object} several times in this chapter.}
 
 \section{Overview}
 
@@ -149,20 +149,30 @@ Cite \cite{bruegge2004object} several times in this chapter.}
 
 \textit{Note: List and describe all functional requirements of your system. Also mention requirements that you were not able to realize. The short title should be in the form ``verb objective''}
 
+% Competency Management
 \begin{itemize}
-\item [FR1] \textbf{Short Title}: Short Description.
-\item [FR2] \textbf{Short Title}: Short Description.
-\item [FR3] \textbf{Short Title}: Short Description.
+	\item [FR1] \textbf{Remove Competencies}: Short Description.
+	\item [FR2] \textbf{Define Competency Due Date}: Short Description.
+	\item [FR3] \textbf{Define Optional Competencies}: Short Description.
+	\item [FR4] \textbf{Define Optional Exercises}: Short Description.
+	\item [FR5] \textbf{Define Optional Lecture Units}: Short Description.
+	\item [FR6] \textbf{Define Exercise Groups}: Short Description.
 \end{itemize}
+
+% Learning Path Generation
+
+% Student View
+
+% Learning Analytics
 
 \subsection{Nonfunctional Requirements}
 
 \textit{Note: List and describe all nonfunctional requirements of your system. Also mention requirements that you were not able to realize. Categorize them using the FURPS+ model described in \cite{bruegge2004object} without the category \textbf{functionality} that was already covered with the functional requirements.}
 
 \begin{itemize}
-\item [NFR1] \textbf{Category}: Short Description.
-\item [NFR2] \textbf{Category}: Short Description.
-\item [NFR3] \textbf{Category}: Short Description.
+	\item [NFR1] \textbf{Category}: Short Description.
+	\item [NFR2] \textbf{Category}: Short Description.
+	\item [NFR3] \textbf{Category}: Short Description.
 \end{itemize}
 
 \section{System Models}
@@ -184,12 +194,12 @@ Cite \cite{bruegge2004object} several times in this chapter.}
 \subsection{Use Case Model}
 
 \textit{Note: This subsection should contain a UML Use Case Diagram including roles and their use cases. You can use colors to indicate priorities. Think about splitting the diagram into multiple ones if you have more than 10 use cases.
-\textbf{Important:} Make sure to describe the most important use cases using the use case table template (./tex/use-case-table.tex). Also describe the rationale of the use case model, i.e. why you modeled it like you show it in the diagram.}
+	\textbf{Important:} Make sure to describe the most important use cases using the use case table template (./tex/use-case-table.tex). Also describe the rationale of the use case model, i.e. why you modeled it like you show it in the diagram.}
 
 \subsection{Analysis Object Model}
 
 \textit{Note: This subsection should contain a UML Class Diagram showing the most important objects, attributes, methods and relations of your application domain including taxonomies using specification inheritance (see \cite{bruegge2004object}). Do not insert objects, attributes or methods of the solution domain.
-\textbf{Important:} Make sure to describe the analysis object model thoroughly in the text so that readers are able to understand the diagram. Also write about the rationale how and why you modeled the concepts like this.}
+	\textbf{Important:} Make sure to describe the analysis object model thoroughly in the text so that readers are able to understand the diagram. Also write about the rationale how and why you modeled the concepts like this.}
 
 \subsection{Dynamic Model}
 
@@ -205,9 +215,9 @@ Cite \cite{bruegge2004object} several times in this chapter.}
 
 \chapter{System Design}
 
-\textit{Note: This chapter follows the System Design Document Template in \cite{bruegge2004object}. 
-You describe in this chapter how you map the concepts of the application domain to the solution domain. Some sections are optional, if they do not apply to your problem.
-Cite \cite{bruegge2004object} several times in this chapter.}
+\textit{Note: This chapter follows the System Design Document Template in \cite{bruegge2004object}.
+	You describe in this chapter how you map the concepts of the application domain to the solution domain. Some sections are optional, if they do not apply to your problem.
+	Cite \cite{bruegge2004object} several times in this chapter.}
 
 \section{Overview}
 
@@ -216,7 +226,7 @@ Cite \cite{bruegge2004object} several times in this chapter.}
 \section{Design Goals}
 
 \textit{Note: Derive design goals from your nonfunctional requirements, prioritize them (as they might conflict with each other) and describe the rationale of your prioritization. Any trade-offs between design goals (e.g., build vs. buy, memory space vs. response time),
-and the rationale behind the specific solution should be described in this section}
+	and the rationale behind the specific solution should be described in this section}
 
 \section{Subsystem Decomposition}
 
@@ -229,7 +239,7 @@ and the rationale behind the specific solution should be described in this secti
 \section{Persistent Data Management}
 
 \textit{Note: Optional section that describes how data is saved over the lifetime of the system and which data. Usually this is either done by saving data in structured files or in databases. If this is applicable for the thesis, describe the approach for persisting data here and show a UML class diagram how the entity objects are mapped to persistent storage.
-It contains a rationale of the selected storage scheme, file system or database, a description of the selected database and database administration issues.}
+	It contains a rationale of the selected storage scheme, file system or database, a description of the selected database and database administration issues.}
 
 \section{Access Control}
 
