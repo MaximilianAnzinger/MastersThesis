@@ -76,9 +76,9 @@ between such, effectively setting the foundation for the integration of \ac{AL} 
 
 Large-scale courses with up to 2000 students make it increasingly difficult for instructors to account for students' individual needs. In such large groups,
 instructors inevitably encounter students with vastly different backgrounds, abilities, ages, and experiences \cite{mulryan2010teaching}.
-One contributing factor for such an heterogeneous student body is the increasing number of international students \cite{oecd2011}. According to
-Woessmann the differences in school systems evidently impact students achievement significantly \cite{woessmann2016importance}.
-Currently, Artemisincorporates little to no features that support instructors' efforts to provide students with individualized material. This lack
+One contributing factor to such a heterogeneous student body is the increasing number of international students \cite{oecd2011}. According to
+Woessmann the differences in school systems impact students' achievement significantly \cite{woessmann2016importance}.
+Currently, Artemis incorporates little to no features that support instructors' efforts to provide students with individualized material. This lack
 of individualization may cause students to be either bored or overwhelmed, situations that might impact the learning outcome and even mental-health
 \cite{graciani2020m, kadison2004college}.
 
@@ -122,8 +122,8 @@ design will be implemented in the \ac{LMS}. Finally, the thesis will document th
 and the development of the features proposed in this section.
 
 \autoref{fig:AOM} shows the analysis object model. We will extend the existing data model by \textit{LearningPaths} to grant students
-an individual learning experience by tracking and evaluating students' skill level. The system will recommend one \textit{Learning Objects}
-(exercise or lecture unit), for that the student has mastered all required competencies (\textit{CompetencyRelation}), depending on this evaluation.
+an individual learning experience by tracking and evaluating students' skill levels. The system will recommend one \textit{Learning Objects}
+(exercise or lecture unit), for which the student has mastered all required competencies (\textit{CompetencyRelation}), depending on this evaluation.
 The features are explained in detail in the consecutive subsections.
 
 \begin{figure}[h!]
@@ -153,7 +153,7 @@ are on track with the expected progress. Use cases related to competency managem
 
 \subsection{Learning Path Generation}
 Once a student enrolls in a course, the system will create an individual learning path. When accessing the learning path for the first time,
-students will encounter a self assessment questionaire. Hence, the system can perform initial estimates for students' competencies.
+students will encounter a self-assessment questionnaire. Hence, the system can perform initial estimates for students' competencies.
 The learning path will keep track of the student's progress and evaluate their skill level based on several indicators, e.g. completion, score,
 elapsed time, and number of submissions. Based on this evaluation the system can then recommend suitable lecture units or exercises to fit the
 individual's needs.
@@ -166,9 +166,9 @@ representing the student's performance compared to other enrolled students can b
 \autoref{fig:LearningPathStudentViewMockup} depicts the view of a student during the learning process. On the left side of the screen, students can see their
 progress represented as a network. When selecting one of the nodes, information about the exercise or lecture unit will be displayed. Hence, students can choose
 to continue with this specific learning object. Furthermore, the student will be able to continue with the recommendation made by the system (bottom-right arrow)
-or navigate pack to their previous task. Hence, students spend less time choosing their next task and can fluently
+or navigate back to their previous task. Hence, students spend less time choosing their next task and can fluently
 continue throughout their learning experience.
-The learning object will then be displayed in center of the screen. We will reuse the existing exercise view, hence, students continue their learning experience in
+The learning object will then be displayed in the center of the screen. We will reuse the existing exercise view, hence, students continue their learning experience in
 a familiar environment. Finally, the Q\&A-section of the learning object will be positioned at the right.
 
 \begin{figure}[h!]
@@ -216,7 +216,7 @@ Furthermore, instructors will be able to get insight into every student's learni
 
         \item \textbf{Sprint IV} Beginning of July (Week 26-27)
               \begin{itemize}
-                      \item Implement self assesment questionaire.
+                      \item Implement a self-assessment questionnaire.
                       \item Research a method to evaluate students' performance.
               \end{itemize}
 
