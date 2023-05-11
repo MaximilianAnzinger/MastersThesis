@@ -121,53 +121,53 @@ We will use theoretical research and a requirements analysis to create a softwar
 design will be implemented in the \ac{LMS}. Finally, the thesis will document the analysis of the current state, the requirements engineering process,
 and the development of the features proposed in this section.
 
-The following figures depict the proposed use cases and the analysis object model. The features are explained in detail in the consecutive subsections.
+\autoref{fig:AOM} shows the analysis object model. We will extend the existing data model by \textit{LearningPaths} to grant students
+an individual learning experience by tracking and evaluating students' skill level. The system will recommend one \textit{Learning Objects}
+(exercise or lecture unit), for that the student has mastered all required competencies (\textit{CompetencyRelation}), depending on this evaluation.
+The features are explained in detail in the consecutive subsections.
 
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=\linewidth]{figures/UseCases(4).jpg}
-        \caption{Use Cases related to adaptive learning in Artemis (new use cases are highlighted).}
-        \label{fig:UseCases}
-\end{figure}
-
-\begin{figure}[h!]
-        \centering
-        \includegraphics[width=\linewidth]{figures/ObjectModel (5).jpg}
+        \includegraphics[width=\linewidth]{figures/AOM.jpg}
         \caption{Analysis Object Model for the proposed features and use cases (additions are highlighted).}
         \label{fig:AOM}
 \end{figure}
 
 \subsection{Competency Management Improvements}
-To allow for individual learning paths, instructors must be able to configure competencies in more detail. Firstly, we will implement a feature to allow
-instructors to bundle exercises that represent a variety of different difficulty levels, s.t. the learning path generation can later on cater exercises
-with an appropriate complexity to the individual students.
-
-Furthermore, we will add the functionality that instructors can flag competencies or specific exercises as optional material. Therefore, ambitious students' learning paths
+To allow for individual learning paths, instructors must be able to configure competencies in more detail. Firstly, we will add the
+functionality that instructors can flag competencies or specific exercises as optional material. Therefore, ambitious students' learning paths
 may incorporate these tasks to maintain the relatively high level of difficulty that these students may expect to keep them motivated.
 On the other hand, the learning path system can omit these exercises for students that fall behind and provide alternative resources to allow them
 to reiterate and gain more confidence with the required learning material.
 It should be noted, that both of the before-mentioned features have to exclude exercises that contribute towards the course score.
 
-Finally, we extend competencies by adding the option for instructors to configure deadlines. Therefore, students can get feedback if they are on track with the
-expected progress.
+Finally, we extend competencies by adding the option for instructors to configure deadlines. Therefore, students can get feedback if they
+are on track with the expected progress. Use cases related to competency management can be seen in \autoref{fig:UseCasesInstructor}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\linewidth]{figures/UseCasesInstructor.jpg}
+        \caption{Use Cases related to competency- and learning path management (new use cases are highlighted).}
+        \label{fig:UseCasesInstructor}
+\end{figure}
 
 \subsection{Learning Path Generation}
-Once a student enrolls in a course, the system will create an individual learning path. The learning path will keep track of the student's progress and evaluate
-their skill level based on several indicators, e.g. completion, score, elapsed time, and number of submissions. Based on this evaluation the system can then
-recommend suitable lecture units or exercises to fit the individual's needs.
+Once a student enrolls in a course, the system will create an individual learning path. When accessing the learning path for the first time,
+students will encounter a self assessment questionaire. Hence, the system can perform initial estimates for students' competencies.
+The learning path will keep track of the student's progress and evaluate their skill level based on several indicators, e.g. completion, score,
+elapsed time, and number of submissions. Based on this evaluation the system can then recommend suitable lecture units or exercises to fit the
+individual's needs.
 
 \subsection{Student View}
 Students must be able to view their progress in their learning path. We add an intuitive representation of the already completed and upcoming tasks.
 Furthermore, students will be able to review whether their progression is within the instructor's expectations regarding time. Further feedback indicators
 representing the student's performance compared to other enrolled students can be beneficial to promote self-regulatory learning.
 
-The overview will also incorporate the recommendation made by the learning path generation. Hence, students spend less time choosing their next task and can fluently
-continue throughout their learning experience.
-
 \autoref{fig:LearningPathStudentViewMockup} depicts the view of a student during the learning process. On the left side of the screen, students can see their
 progress represented as a network. When selecting one of the nodes, information about the exercise or lecture unit will be displayed. Hence, students can choose
 to continue with this specific learning object. Furthermore, the student will be able to continue with the recommendation made by the system (bottom-right arrow)
-or navigate pack to their previous task.
+or navigate pack to their previous task. Hence, students spend less time choosing their next task and can fluently
+continue throughout their learning experience.
 The learning object will then be displayed in center of the screen. We will reuse the existing exercise view, hence, students continue their learning experience in
 a familiar environment. Finally, the Q\&A-section of the learning object will be positioned at the right.
 
@@ -210,20 +210,20 @@ Furthermore, instructors will be able to get insight into every student's learni
 
         \item \textbf{Sprint III} End of June (Week 24-25)
               \begin{itemize}
-                      \item Implement a mechanism to generate exercise groups that represent a variety of different difficulty levels.
+                      \item Create server-sided learning path generation for each student.
+                      \item Implement a mechanism to let instructors select the accessibility of learning paths.
               \end{itemize}
 
         \item \textbf{Sprint IV} Beginning of July (Week 26-27)
               \begin{itemize}
-                      \item Create server-sided learning path generation for each student.
-                      \item Implement a mechanism to let instructors select the accessibility of learning paths.
+                      \item Implement self assesment questionaire.
+                      \item Research a method to evaluate students' performance.
               \end{itemize}
 
         \item \textbf{Sprint V} Beginning of August (Week 28-29)
               \begin{itemize}
                       \item Implement student view of their individual learning path.
                       \item Implement instructor view to visualize the general and individual progress of students.
-                      \item Research a method to evaluate students' performance.
               \end{itemize}
 
         \item \textbf{Sprint VI} Mid of August (Week 30-31)
