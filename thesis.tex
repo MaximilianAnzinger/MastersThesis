@@ -260,35 +260,36 @@
 
 %------- chapter 6 -------
 
-\chapter{Case Study / Evaluation}
+\chapter{Object Design}
+\label{chapter:ObjectDesign}
 
-\textit{Note: If you did an evaluation / case study, describe it here.}
+%todo intro
 
-\section{Design}
+\section{Learning Paths}
+\label{section:LearningPaths}
 
-\textit{Note: Describe the design / methodology of the evaluation and why you did it like that. E.g. what kind of evaluation have you done (e.g. questionnaire, personal interviews, simulation, quantitative analysis of metrics, what kind of participants, what kind of questions, what was the procedure?}
+\autoref{figure:LPOM} describes the implementation of learning paths. A \textit{LearningPath}
+is owned by a student of a course. Therefore a \textit{User} aggregates several \textit{LearningPath}s
+that are linked to the corresponding \textit{Course}. Both one-to-many relations are configured to
+cascade removal to avoid destached \textit{LearningPath}s. Furthermore, the database contains a
+uniqueness constraint for the tuple \textit{Course} and \textit{User} to ensure that each \textit{User}
+in a \textit{Course} owns at most one \textit{LearningPath}. Finally, a \textit{LearningPath} consists
+of a collection of \textit{Competency} objects that the student needs to master. While in the current state,
+this information could be retrieved via the linked \textit{Course}, plans to standardize competencies
+and thus free them from the strict ownership by a \textit{Course} and the goal of providing
+cross-course learning paths make this an essential design decision. This is also the reason a uniqueness
+constraint is preferred over a composite primary key that would strongly tie the \textit{LearningPath}
+to a specific course.
 
-\section{Objectives}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{figures/LearningPathObjectModel.png}
+	\caption{Class Diagram for the Composition of Learning Paths}
+	\label{figure:LPOM}
+\end{figure}
 
-\textit{Note: Derive concrete objectives / hypotheses for this evaluation from the general ones in the introduction.}
-
-\section{Results}
-
-\textit{Note: Summarize the most interesting results of your evaluation (without interpretation). Additional results can be put into the appendix.}
-
-\section{Findings}
-
-\textit{Note: Interpret the results and conclude interesting findings}
-
-\section{Discussion}
-
-\textit{Note: Discuss the findings in more detail and also review possible disadvantages that you found}
-
-\section{Limitations}
-
-\textit{Note: Describe limitations and threats to validity of your evaluation, e.g. reliability, generalizability, selection bias, researcher bias}
-
-
+\section{Learning Path Graph}
+\label{section:LearningPathGraph}
 
 %------- chapter 7 -------
 
