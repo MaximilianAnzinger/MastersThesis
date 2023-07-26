@@ -270,7 +270,7 @@
 
 \autoref{figure:LPOM} describes the implementation of learning paths. A \textit{LearningPath}
 is owned by a student of a course. Therefore a \textit{User} aggregates several \textit{LearningPath}s
-that are linked to the corresponding \textit{Course}. Both one-to-many relations are configured to
+that are linked to the corresponding \textit{Course}s. Both one-to-many relations are configured to
 cascade removal to avoid destached \textit{LearningPath}s. Furthermore, the database contains a
 uniqueness constraint for the tuple \textit{Course} and \textit{User} to ensure that each \textit{User}
 in a \textit{Course} owns at most one \textit{LearningPath}. Finally, a \textit{LearningPath} consists
